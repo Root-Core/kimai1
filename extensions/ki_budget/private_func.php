@@ -223,7 +223,7 @@ function budget_plot_data($projects, $projectsFilter, $activitiesFilter, &$expen
 
         //cleanup: don't show charts without any data
         foreach ($wages[$projectId] as $activityId => $entry) {
-            if ($activityId == 0) {
+            if ($activityId == 0 || !is_array($wages[$projectId][$activityId])) {
                 continue;
             }
             if (!isset($entry['total']) || is_null($entry['total'])) {

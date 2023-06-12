@@ -80,8 +80,7 @@ if (isset($_REQUEST['last_day'])) {
 }
 
 if ($axAction != 'reloadLogfile') {
-    Kimai_Logger::logfile("KSPI axAction (" . (array_key_exists('customer',
-            $kga) ? $kga['customer']['name'] : $kga['user']['name']) . "): " . $axAction);
+    Kimai_Logger::logfile("KSPI axAction (" . ($kga->has('customer') ? $kga['customer']['name'] : $kga['user']['name']) . "): " . $axAction);
 }
 
 // prevent IE from caching the response

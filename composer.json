@@ -10,6 +10,9 @@
         { "name": "Kevin Papst", "homepage": "https://github.com/kevinpapst" },
         { "name": "Simon Schaufelberger", "homepage": "https://github.com/simonschaufi" }
     ],
+    "repositories": [
+        { "type": "git", "url": "https://github.com/tine20/zendframework1.git" }
+    ],
     "require": {
         "php": ">=5.6.0",
         "ext-json": "*",

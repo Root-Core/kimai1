@@ -2568,7 +2568,7 @@ class Kimai_Database_Mysql
                   FROM ${p}projects AS project
                   JOIN ${p}customers AS customer USING(customerID)
                   JOIN ${p}groups_projects USING(projectID)
-                  WHERE ${p}groups_projects.groupID  IN (" . implode($groups, ',') . ")
+                  WHERE ${p}groups_projects.groupID  IN (" . implode(',', $groups) . ")
                     AND customerID = $customerID
                     AND project.internal=0
                     AND project.trash=0
@@ -3641,7 +3641,7 @@ class Kimai_Database_Mysql
         } else {
             $query = "SELECT DISTINCT u.* FROM ${p}users AS u
                 JOIN ${p}groups_users AS g_u USING(userID)
-                WHERE g_u.groupID IN (" . implode($groups, ',') . ") AND
+                WHERE g_u.groupID IN (" . implode(',', $groups) . ") AND
                 trash = $trash
                 ORDER BY name ;";
         }

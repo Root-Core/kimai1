@@ -346,7 +346,7 @@ switch ($axAction) {
                     }
 
                     if (count($setFor) != 0) {
-                        $line .= ' (' . implode($setFor, ', ') . ')';
+                        $line .= ' (' . implode(', ', $setFor) . ')';
                     }
 
                     $data['rates'][] = ['value' => $rate['rate'], 'desc' => $line];
@@ -389,7 +389,7 @@ switch ($axAction) {
                     }
 
                     if (count($setFor) != 0) {
-                        $line .= ' (' . implode($setFor, ', ') . ')';
+                        $line .= ' (' . implode(', ', $setFor) . ')';
                     }
 
                     $data['rates'][] = ['value' => $rate['rate'], 'desc' => $line];
